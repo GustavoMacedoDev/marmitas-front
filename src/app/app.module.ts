@@ -13,6 +13,7 @@ import { MenuComponent } from './menu/menu.component';
 import { BarraNavegacaoComponent } from './barra-navegacao/barra-navegacao.component';
 import { ListaPedidoComponent } from './pedido/lista-pedido/lista-pedido.component';
 import { PedidoService } from './services/pedido.service';
+import { CadastraPedidoComponent } from './pedido/cadastra-pedido/cadastra-pedido.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PedidoService } from './services/pedido.service';
     ListaPessoaComponent,
     MenuComponent,
     BarraNavegacaoComponent,
-    ListaPedidoComponent
+    ListaPedidoComponent,
+    CadastraPedidoComponent
   ],
   imports: [
     BrowserModule,

@@ -26,6 +26,10 @@ export class PedidoService {
       return this.httpClient.get<Pedido[]>(this.baseUrlService);
     } 
 
+    getPedido(idPedido:number){
+     
+      return this.httpClient.get(this.baseUrlService + idPedido);
+  }
 
 
 }

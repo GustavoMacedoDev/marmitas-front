@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pedido } from 'src/app/services/pedido';
 import { PedidoService } from 'src/app/services/pedido.service';
+import { Lancamento } from 'src/app/models/lancamento';
 
 @Component({
   selector: 'app-lista-pedido',
@@ -10,7 +11,8 @@ import { PedidoService } from 'src/app/services/pedido.service';
 export class ListaPedidoComponent implements OnInit {
   public titulo: String;
   public pedidos: Pedido[] = new Array();
-  public itens: Pedido[] = new Array();
+
+  itens: Lancamento[];
 
   constructor(private pedidoService: PedidoService) { }
 
@@ -18,11 +20,8 @@ export class ListaPedidoComponent implements OnInit {
     /*SETA O TÍTULO */
     this.titulo = "Pedidos Cadastrados";
 
-    
-
-    /*CHAMA O SERVIÇO E RETORNA TODAS AS PESSOAS CADASTRADAS */
-    this.pedidoService.getPedidos().subscribe(res => this.pedidos = res);
-
+    //this.pedidoService.getPedido(1).subscribe(res => this.pedidos = res);
+    console.log(this.pedidos);
   }
 
   

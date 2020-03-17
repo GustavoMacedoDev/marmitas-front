@@ -1,0 +1,12 @@
+<section>
+    <h2>Pedido</h2>
+    <form name="pedido" action="" method="POST">
+        <label for="lanches">Selecione o Lanche:</label>
+        <select class="form-control">
+            <option *ngFor="let cliente of clientes" value= {{cliente.id}}>
+              {{cliente.nome}}
+            </option>
+         </select>
+        <input type="submit" value="enviar" />
+    </form>
+</section>
