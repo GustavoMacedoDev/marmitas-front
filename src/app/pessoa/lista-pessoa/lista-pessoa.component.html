@@ -1,0 +1,26 @@
+<h3>{{titulo}}</h3>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Fone</th>
+        <th>Fixo</th>
+        <th>Editar</th>
+    </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let cliente of clientes; let i = index;">
+          <td>{{ cliente.id }}</td>        
+          <td>{{ cliente.nome }}</td>
+          <td>{{ cliente.fone1 }}</td>
+          <td>{{ cliente.fone2 }}</td>
+          <td><a routerLink="/cliente/editar/{{cliente.id}}">Editar</a></td>
+        </tr>
+        <tr>
+           <td colspan="6" style="text-align: right;">Total de Registros: {{ clientes.length }}</td> 
+        </tr>
+    </tbody>
+</table>

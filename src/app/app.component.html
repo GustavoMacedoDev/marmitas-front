@@ -1,10 +1,8 @@
-<form  (ngSubmit)="salvar()">
-  <div class="form-group">
-    <label for="nomeCliente">Nome do Cliente</label>
-    <input type="input" class="form-control" name="nome" placeholder="Nome do Cliente" [(ngModel)]="pessoa.nome"/>
-  </div>
-  <button type="submit" class="btn btn-primary">Salvar</button>
-</form>
-
-
+<app-barra-navegacao (onToggle)="menuLateral.toggle()"></app-barra-navegacao>
+<div class="main">
+    <app-menu #menuLateral></app-menu>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
 

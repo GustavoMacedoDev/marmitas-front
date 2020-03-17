@@ -1,0 +1,26 @@
+<h3>{{titulo}}</h3>
+
+<table class="table" *ngIf="existeItens()">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Produto</th>
+        <th>Desconto</th>
+        <th>Quantidade</th>
+        <th>Preço</th>
+    </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let pedido of pedidos">
+          <td>{{ pedido.idPedido }}</td>        
+          <td>{{ pedido.itens.desconto }}</td>
+          <td>{{ pedido.desconto }}</td>
+          <td>{{ pedido.quantidade }}</td>
+          <td>{{ pedido.preco }}</td>
+        </tr>
+        <tr>
+           <td colspan="6" style="text-align: right;">Total de Registros: {{ pedidos.length }}</td> 
+        </tr>
+    </tbody>
+</table>

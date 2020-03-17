@@ -1,7 +1,15 @@
 <form  (ngSubmit)="salvar()">
     <div class="form-group">
       <label for="nomeCliente">Nome do Cliente</label>
-      <input type="input" class="form-control" name="nome" placeholder="Nome do Cliente" [(ngModel)]="pessoa.nome"/>
+      <input type="input" class="form-control" name="nome" placeholder="Nome do Cliente" [(ngModel)]="cliente.nome"/>
+    </div>
+    <div class="form-group">
+      <label for="fone1">Celular</label>
+      <input type="tel" class="form-control" name="fone1" placeholder="Celular" [(ngModel)]="cliente.fone1"/>
+    </div>
+    <div class="form-group">
+      <label for="fone2">Fixo</label>
+      <input type="tel" class="form-control" name="fone2" placeholder="Fixo" [(ngModel)]="cliente.fone2"/>
     </div>
     <button type="submit" class="btn btn-primary">Salvar</button>
   </form>
